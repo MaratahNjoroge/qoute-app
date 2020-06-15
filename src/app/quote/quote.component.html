@@ -1,0 +1,48 @@
+
+<h1>My Quotes</h1>
+<hr>
+<!-- <div class="container">
+  <div class="row">
+      <div class="col-md-4">
+          <app-quotes-form (addQuote)="addNewQuote($event)"></app-quotes-form>
+        </div>
+        </div>
+        <div class="row">
+        <div class="col-md-4">
+  <ol *ngFor="let saying of quotes;let i= index">
+      
+   <h2>"{{saying.quote}}"</h2>
+   <i>"{{saying.author}}"</i><br>
+      <!-- Display more details about the quote by clicking the button below -->
+<!-- <button class="btn btn-primary" (click)='toggleDetails(i)'>Show Details</button> -->
+
+<!-- Load details component -->
+<!-- <div class="col-md-4" *ngIf="saying.showDetails"> 
+   <app-details [saying]='saying' (complete)='removeQuote($event,i)'></app-details>
+</div>
+</ol>
+</div>
+</div> -->
+
+
+<div class="container">
+    <app-quotes-form (addQuote)="addNewQuote($event)"></app-quotes-form>
+    <div class="row">
+        <div class="card col-md-4" *ngFor="let saying of quotes;let i= index">
+            <div class="card-header">
+                Quote
+            </div>
+            <div class="card-body">
+                <blockquote class="blockquote mb-0">
+                    <p>"{{saying.quote}}"</p>
+                    <footer class="blockquote-footer">{{saying.author}} Uploaded By: <cite title="Source Title">{{saying.user}}</cite></footer>
+                    <!-- <button class="btn btn-primary" (click)='toggleDetails(i)'>Show Details</button>                     -->
+                </blockquote>
+            </div>
+            <div class="card-footer text-muted">
+                    <app-details [saying]='saying' (complete)='removeQuote($event,i)'></app-details>
+                    
+                  </div>
+        </div>
+    </div>
+</div>

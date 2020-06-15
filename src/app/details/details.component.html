@@ -1,0 +1,6 @@
+<p>Created <i>{{saying.dateAdded|days}} days ago</i></p>
+   <button class="btn btn-dark up" name="up" (click)='upVote()'><i class="fa fa-thumbs-up" id="like">Yaay</i> ({{saying.upVotes}})</button>
+   <button class="btn btn-dark down" name="down" (click)='downVote()'><i class="fa fa-thumbs-down">Naay</i> ({{saying.downVotes}})</button>
+   <div class="row">
+   <button class="btn btn-danger" (click)='deleteQuote(true)'><i class="fa fa-trash"></i>Delete</button>
+  </div>
