@@ -12,7 +12,7 @@ This is agular cli application that displays quotes, allow the user to input new
 https://maratahnjoroge.github.io/qoute-app/ 
 
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 8.2.1.
+This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 9.1.7.
 
 ## Development server
 
